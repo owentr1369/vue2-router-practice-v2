@@ -5,9 +5,16 @@
       <router-link to="/about">About</router-link> |
       <router-link to="/products">Product</router-link>
     </nav>
-    <router-view />
+    <router-view></router-view>
   </div>
 </template>
+<script>
+export default {
+  mounted() {
+    this.$store.dispatch("fetchProducts");
+  },
+};
+</script>
 
 <style lang="scss">
 #app {

@@ -1,12 +1,15 @@
 <template>
   <div class="product-layout">
-    <h1>Product</h1>
+    <product-list></product-list>
     <router-view></router-view>
   </div>
 </template>
 
 <script>
-export default {};
+import ProductList from "./ProductList.vue";
+export default {
+  components: { ProductList },
+};
 </script>
 
 <style>
